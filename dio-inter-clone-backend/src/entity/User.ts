@@ -30,4 +30,7 @@ export class User {
 
   @Column()
   password: string;
+
+  @Column()
+  password2: string;
 }
