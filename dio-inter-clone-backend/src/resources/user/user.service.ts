@@ -19,6 +19,8 @@ export default class UserService {
     if(!existUser) {
       throw new AppError('Usuário não encontrado', 401);
     };
+
+    return existUser;
   }
 
   async signup( user: UserSignUp){

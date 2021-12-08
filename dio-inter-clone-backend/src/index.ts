@@ -1,14 +1,22 @@
+import 'express-async-errors';
 import express from 'express';
-import { globalErrors } from './middleware/globalErros';
+import { createConnection } from 'typeorm';
 import routes from './routes';
+import { globalErrors } from './middleware/globalErros';
 
-const app = express();
-const PORT = 3333;
+createConnection().then(connection => {
+  const app = express();
+  const PORT = 3333;
 
-app.use(routes);
+  app.use(express.json())
 
-app.use(globalErrors);
+  app.use(routes);
 
-app.listen(PORT, () => {
-  console.log(`⚡️[server]: Server is running at http://localhost:${PORT}`);
-});
+  app.use(globalErrors);
+
+  app.listen(PORT, () => {
+    console.log(`⚡️[server]: Server is running at http://localhost:${PORT}`);
+  });
+}).catch((error) => {
+  console.log("Unable to connect to the database", error)
+})
