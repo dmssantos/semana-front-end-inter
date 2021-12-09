@@ -8,11 +8,11 @@ import Input from '../../components/Inputs';
 import Button from '../../components/Button';
 import { Link, useNavigate } from 'react-router-dom';
 
-const SignIn = () => {
+const SignUp = () => {
 
     const navigate = useNavigate()
 
-    const handleToSignin = () => {
+    const handleToSignup = () => {
         navigate('/dashboard')
     };
 
@@ -23,17 +23,20 @@ const SignIn = () => {
                 <img src={logoInter} width={172} height={61} alt="logo inter" />
 
                 <InputContainer>
+                    <Input placeholder="NOME" />
+                    <Input placeholder="SOBRENOME" />
                     <Input placeholder="EMAIL" />
                     <Input placeholder="SENHA" type="password" />
+                    <Input placeholder="CONFIRMAR SENHA" type="password" />
                 </InputContainer>
 
                 <ButtonContainer>
-                    <Button type="button" onClick={handleToSignin}>Entrar</Button>
-                    <p>Ainda não é cadastrado? <Link to="/signup">Cadastre-se já</Link></p>
+                    <Button type="button" onClick={handleToSignup}>Entrar</Button>
+                    <p>Já tem uma conta? <Link to="/signin">Entre já</Link></p>
                 </ButtonContainer>
             </Card>
         </Wrapper>
     )
 }
 
-export default SignIn;
+export default SignUp;
