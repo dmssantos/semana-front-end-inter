@@ -4,7 +4,7 @@ import Card from '../../components/Card';
 
 import background from '../../assets/images/background-login.jpg';
 import logoInter from '../../assets/images/Inter-orange.png';
-import Input from '../../components/Inputs';
+import Input from '../../components/Input';
 import Button from '../../components/Button';
 import { Link, useNavigate } from 'react-router-dom';
 
