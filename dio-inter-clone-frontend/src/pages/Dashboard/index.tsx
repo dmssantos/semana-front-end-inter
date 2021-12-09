@@ -5,7 +5,7 @@ import Card from '../../components/Card';
 import Input from '../../components/Input';
 import Button from '../../components/Button';
 
-// import Statement from './Statement';
+import Statement from './Statement';
 
 const Dashboard = () => {
 
@@ -56,6 +56,8 @@ const Dashboard = () => {
                         <InlineTitle>
                             <h2 className="h2">Extrato da conta</h2>
                         </InlineTitle>
+
+                        <Statement />
                     </Card>
                 </div>
             </BodyContainer>
