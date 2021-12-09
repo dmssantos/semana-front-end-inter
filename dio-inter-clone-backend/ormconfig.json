@@ -3,7 +3,7 @@
     "type": "postgres",
     "host": "localhost",
     "port": 5432,
-    "username": "postgres",
+    "username": "admin",
     "password": "dio-inter",
     "database": "inter",
     "entities": ["src/entity/*.ts"],

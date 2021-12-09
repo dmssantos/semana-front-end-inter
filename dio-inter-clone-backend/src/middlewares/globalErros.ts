@@ -1,5 +1,5 @@
-import { Request, Response, NextFunction } from 'express';
-import AppError from '../shared/error/AppError';
+import { Request, Response, NextFunction } from 'express'
+import AppError from '../shared/error/AppError'
 
 function globalErrors(err: Error, request: Request, response: Response, next: NextFunction) {
 
